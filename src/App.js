@@ -30,8 +30,9 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
-    margin: `20px auto`,
-    maxWidth: 450
+    margin: `15px auto`,
+    maxWidth: 450,
+    borderRadius: 10
   },
 
   textField: {
@@ -47,7 +48,7 @@ const styles = theme => ({
   },
 
   services: {
-    fontSize: 23,
+    fontSize: 18,
     paddingTop: 20,
     paddingBottom: 15
     // width: 350
@@ -79,23 +80,28 @@ class App extends Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={classNames(classes.root, "mainDiv")}>
         <Paper className={classes.paper} elevation={0}>
-          <Typography className="fields" align="center" variant="h3">
+          <Typography
+            className="fields"
+            align="center"
+            variant="h4"
+            style={{ marginTop: 20, fontSize: 40 }}
+          >
             Say Hello!
           </Typography>
-          <div style={{ margin: "5%" }}>
+          <div style={{ margin: "6%" }}>
             <FormControl fullWidth style={{ marginTop: 20 }}>
               <InputLabel
                 className="fields"
-                style={{ marginLeft: 8, fontSize: 18 }}
+                style={{ marginLeft: 8, fontSize: 17 }}
                 htmlFor="adornment-amount"
               >
                 Your Name
               </InputLabel>
               <Input
                 className="fields"
-                style={{ fontSize: 23, paddingTop: 10, paddingBottom: 10 }}
+                style={{ fontSize: 18, paddingTop: 10, paddingBottom: 10 }}
                 id="adornment-amount"
                 // value={"this.state.amount"}
                 placeholder="Enter your name"
@@ -108,14 +114,14 @@ class App extends Component {
             <FormControl fullWidth style={{ marginTop: 20 }}>
               <InputLabel
                 className="fields"
-                style={{ marginLeft: 8, fontSize: 18 }}
+                style={{ marginLeft: 8, fontSize: 17 }}
                 htmlFor="adornment-amount"
               >
                 Email
               </InputLabel>
               <Input
                 className="fields"
-                style={{ fontSize: 23, paddingTop: 10, paddingBottom: 10 }}
+                style={{ fontSize: 18, paddingTop: 10, paddingBottom: 10 }}
                 id="adornment-amount"
                 // value={"this.state.amount"}
                 placeholder="Enter your email address"
@@ -133,11 +139,11 @@ class App extends Component {
                 value={this.state.service}
                 onChange={this.handleChange("service")}
                 InputLabelProps={{
-                  // className="fields",
-                  style: { marginLeft: 8, fontSize: 18 }
+                  className: "fields",
+                  style: { marginLeft: 8, fontSize: 17 }
                 }}
                 InputProps={{
-                  // className="fields",
+                  className: "fields",
                   startAdornment: <InputAdornment position="start" />,
                   classes: { input: classes.services }
                 }}
@@ -167,9 +173,11 @@ class App extends Component {
                 value={this.state.budget}
                 onChange={this.handleChange("budget")}
                 InputLabelProps={{
-                  style: { marginLeft: 8, fontSize: 18 }
+                  className: "fields",
+                  style: { marginLeft: 8, fontSize: 17 }
                 }}
                 InputProps={{
+                  className: "fields",
                   startAdornment: <InputAdornment position="start" />,
                   classes: { input: classes.services }
                 }}
@@ -199,9 +207,11 @@ class App extends Component {
                 rows="4"
                 placeholder="Your message here..."
                 InputLabelProps={{
-                  style: { marginLeft: 8, fontSize: 18 }
+                  className: "fields",
+                  style: { marginLeft: 8, fontSize: 17 }
                 }}
                 InputProps={{
+                  className: "fields",
                   startAdornment: <InputAdornment position="start" />,
                   classes: { input: classes.services }
                 }}

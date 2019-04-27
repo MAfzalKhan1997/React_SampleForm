@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:500");
+@import url("https://fonts.googleapis.com/css?family=Poppins:600");
+
+.mainDiv {
+  background: #a64bf4;
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+}
 
 .fields {
   font-family: "Poppins", sans-serif !important;
-  /* text-align: center; */
 }
