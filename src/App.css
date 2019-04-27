@@ -5,6 +5,33 @@
   background: linear-gradient(45deg, #00dbde, #fc00ff);
 }
 
+.innerDiv {
+  margin: 6% !important;
+}
+
+@media screen and (max-width: 576px) {
+  .innerDiv {
+    margin: 0px !important;
+  }
+}
+
 .fields {
   font-family: "Poppins", sans-serif !important;
+}
+
+.button {
+  background-image: linear-gradient(
+    to right,
+    #00dbde,
+    #fc00ff 50%,
+    #fc00ff 50%,
+    #00dbde
+  ) !important;
+  background-position: 100% 0 !important;
+  background-size: 200% 100% !important;
+  transition: all 0.28s ease-in !important;
+}
+
+.button:hover {
+  background-position: 0 0 !important;
 }
